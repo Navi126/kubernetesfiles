@@ -19,4 +19,4 @@ spec:
         - name: mycon1
           image:  shaikmustafa/cycle
           ports:
-            - containerPorts: 80
+            - containerPort: 80
