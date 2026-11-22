@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ResourceQuota
+metadata:
+  name: my-res
+  namespace: dev
+spec:
+  hard:
+    limits.cpu: "500M"
+    limits.memory: "500Mi"
+    requests.cpu: "100M"
+    requests.memory: "100Mi"

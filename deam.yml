@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: mydaemon
+  labels:
+    app: swiggy
+spec:
+  selector:
+    matchLabels:
+      app: swiggy
+  template:
+    metadata:
+      name: mytmp1
+      labels:
+        app: swiggy
+    spec:
+      containers:
+        - name: mycon3
+          image: nginx
+          ports:
+            - containerPort: 82
