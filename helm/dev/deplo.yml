@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mydep
+  labels:
+    app: uber
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: uber
+  template:
+    metadata:
+      name: mytmp
+      labels:
+        app: uber
+    spec:
+      containers:
+        - name: mycon1
+          image:  shaikmustafa/cycle
+          ports:
+            - containerPorts: 80
